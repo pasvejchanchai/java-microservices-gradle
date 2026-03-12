@@ -2,7 +2,7 @@ name: Build and Push DockerImage
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
   workflow_dispatch:
       
@@ -21,7 +21,7 @@ jobs:
         java-version: 17
 
     - name: Grant permission
-      run: chmod +x gradlew
+      run: chmod +x service-member/gradlew
 
     - name: Build with Gradle
       run: ./gradlew build -x test
