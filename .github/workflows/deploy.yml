@@ -29,10 +29,10 @@ jobs:
       working-directory: service-member
 
     - name: Build Docker Image
-      run: docker build -t service-member:latest ./service-member
+      run: docker build -t pasvej/service-member:latest ./service-member
 
     - name: Login DockerHub
       run: docker login -u pasvej@gmail.com -p P@ssw0rd1234
 
     - name: Push Docker Image
-      run: docker push service-member:latest
+      run: docker push pasvej/service-member:latest
